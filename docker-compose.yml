@@ -4,9 +4,10 @@ services:
   glutz:
     image: timeens/glutz-e-access
     ports:
-      - "80"
+      - "26682"
+      - "8332"
     volumes:
       - ./db-data:/glutz/db-data
-    environment:
+    # environment:
       # DB_NAME: "database.gax"
       # DOWNLOAD_LINK: "https://glutz.com/service/downloads/?dwnldid=97483"

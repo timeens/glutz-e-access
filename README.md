@@ -12,3 +12,7 @@ DB_NAME="database.gax" <= Make sure this Database file exists in the db-data fol
 
 Place existing database into db-data folder and adjust the environment
 var accordingly in the `docker-compose.yml` file.
+
+Software listens to ports: <br>
+<26682> <br>
+<8332>
