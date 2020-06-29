@@ -2,10 +2,10 @@ version: "3.8"
 services:
   
   glutz:
-    image: timeens/glutz-e-access
+    image: glutzy
     ports:
-      - "26682"
-      - "8332"
+      - 26682:26682
+      - 8332:8332
     volumes:
       - ./db-data:/glutz/db-data
     # environment:

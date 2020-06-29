@@ -8,7 +8,7 @@ ENV DB_NAME="database.gax"
 RUN echo 'alias glutz="/glutz/server/Desktop/eAccessServer"' >> ~/.bashrc
 
 #install required libs
-RUN apt -y update && apt -y install wget systemctl libglib2.0-0 libgl1-mesa-glx libdbus-1-3
+RUN apt -y update && apt -y install wget systemctl libglib2.0-0 libgl1-mesa-glx libdbus-1-3 libssl-dev
 
 # create glutz server directory
 RUN mkdir /glutz
@@ -23,8 +23,12 @@ RUN rm glutz.tar.gz
 RUN bash server/install_udev_rules.sh
 
 # Build a shell script because the ENTRYPOINT command doesn't like using ENV
-RUN echo "#!/bin/bash \n /glutz/server/Desktop/eAccessServer --auto-convert --auto-reclaim /glutz/db-data/${DB_NAME}" > ./entrypoint.sh
+RUN echo "#!/bin/bash \n /glutz/server/Desktop/eAccessServer --logfile="/var/log/glutz.log" --loglevel=5 --auto-convert --auto-reclaim /glutz/db-data/${DB_NAME}" > ./entrypoint.sh
 RUN chmod +x ./entrypoint.sh
+
+# expose ports
+EXPOSE 26682:26682
+EXPOSE 8332:8332
 
 # run
 ENTRYPOINT ["./entrypoint.sh"]
