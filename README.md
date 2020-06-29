@@ -6,7 +6,7 @@ Server can be accessed using the alias <glutz> for example: <br>
 
 Environment variables: <br>
 
-DOWNLOAD_LINK="https://glutz.com/service/downloads/?dwnldid=97483"
+DOWNLOAD_LINK="https://glutz.com/service/downloads/?dwnldid=97483" <br>
 DB_NAME="database.gax"
 
 
