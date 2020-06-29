@@ -2,7 +2,7 @@ version: "3.8"
 services:
   
   glutz:
-    image: glutzy
+    image: timeens/glutz-e-access:latest
     ports:
       - 26682:26682
       - 8332:8332
