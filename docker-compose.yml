@@ -8,5 +8,5 @@ services:
     volumes:
       - ./db-data:/glutz/db-data
     environment:
-      ENV DB_NAME: "database.gax"
+      # DB_NAME: "database.gax"
       DOWNLOAD_LINK: "https://glutz.com/service/downloads/?dwnldid=97483"
