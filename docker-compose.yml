@@ -2,11 +2,11 @@ version: "3.8"
 services:
   
   glutz:
-    image: glutz:latest
+    image: timeens/glutz-e-access
     ports:
       - "80"
     volumes:
       - ./db-data:/glutz/db-data
     environment:
       # DB_NAME: "database.gax"
-      DOWNLOAD_LINK: "https://glutz.com/service/downloads/?dwnldid=97483"
+      # DOWNLOAD_LINK: "https://glutz.com/service/downloads/?dwnldid=97483"
