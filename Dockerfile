@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
 # env variables
 ENV DOWNLOAD_LINK="https://glutz.com/service/downloads/?dwnldid=97483"
