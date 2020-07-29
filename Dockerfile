@@ -8,7 +8,7 @@ ENV DB_NAME="database.gax"
 RUN echo 'alias glutz="/glutz/server/Desktop/eAccessServer"' >> ~/.bashrc
 
 #install required libs
-RUN apt -y update && apt -y install wget systemctl libglib2.0-0 libgl1-mesa-glx libdbus-1-3 libssl-dev
+RUN apt -y update && apt -y install wget libglib2.0-0 libgl1-mesa-glx libdbus-1-3 libssl-dev
 
 # create glutz server directory
 RUN mkdir /glutz
